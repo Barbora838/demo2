@@ -31,18 +31,17 @@ public class RatingResource {
 
     //added
     @GET
-    @Path("/rate/{like}")
+    @Path("/rate/{documentId}/like")
     @Produces("text/plain")
-    public Response getLike(@PathParam("like") String like ) {
-        return Response.ok(like).build();
+    public Response getLike(@PathParam("documentId") String documentId ) {
+        return Response.ok(documentId).build();
     }
 
     @GET
-    @Path("/rate/{dislike}")
+    @Path("/rate/{documentId}/dislike")
     @Produces("text/plain")
-    public Response getDislike(@PathParam("dislike") String dislike ) {
-        return Response.ok(dislike).build();
+    public Response getDislike(@PathParam("documentId") String documentId ) {
+        return Response.ok(documentId).build();
     }
-
 
 }
