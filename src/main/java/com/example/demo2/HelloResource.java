@@ -23,9 +23,18 @@ public class HelloResource {
     @GET
     @Path("/hello")
     @Produces("text/plain")
-    public Response getHello() {
-        return Response.ok(helloService.getHello()).build();
+    public Response getId() {
+        return Response.ok(helloService.getId()).build();
     }
 
+//added
+    @GET
+    @Path("/like")
+    @Produces("text/plain")
+    public Response like() {return Response.ok(helloService.like()).build();}
 
+    @GET
+    @Path("/dislike")
+    @Produces("text/plain")
+    public Response dislike() {return Response.ok(helloService.dislike()).build();}
 }
